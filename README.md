@@ -1,0 +1,288 @@
+[jogos.html](https://github.com/user-attachments/files/21894362/jogos.html)
+[index.html](https://github.com/user-attachments/files/21894367/index.html)
+[meu-jogo.zip](https://github.com/user-attachments/files/21894392/meu-jogo.zip)
+[style.css](https://github.com/user-attachments/files/21894400/style.css)
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    background-color: #181818;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: #00aaff;
+    cursor: pointer;
+  }
+  
+  nav a {
+    color: #ccc;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #00aaff;
+  }
+  
+  .hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00aaff;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ddd;
+  }
+  
+  .btn-download {
+    display: inline-block;
+    background-color: #00aaff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-download:hover {
+    background-color: #0088cc;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #181818;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+  } 
+  .hero-jogos {
+    background-image: url('https://i.ytimg.com/vi/7GrhJVv1q1M/sddefault.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .hero-jogos h1,
+  .hero-jogos p {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  }
+  /* Rodapé */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+footer nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 5px;
+}
+footer nav a:hover {
+  color: #fff;
+}
+
+/* Botão fixo Discord */
+.btn-discord-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #5865F2;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+  z-index: 999;
+}
+.btn-discord-fixo:hover {
+  background: #4752C4;
+  transform: scale(1.1);
+}
+/* Jogos em Destaque */
+.jogos-destaque {
+  padding: 60px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+.jogos-destaque h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.grid-jogos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+.card-jogo {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-jogo img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.card-jogo h3 {
+  margin: 15px 0 10px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+.card-jogo p {
+  font-size: 0.95rem;
+  padding: 0 15px 15px;
+  color: #bbb;
+}
+.card-jogo .btn-download {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: #5865F2;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.card-jogo .btn-download:hover {
+  background: #4752C4;
+}
+.card-jogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+.card-jogo:hover img {
+  transform: scale(1.05);
+}
+/* Loja */
+.loja {
+  padding: 60px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+.loja h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.grid-loja {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.item-loja {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+.item-loja img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.item-loja h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+.item-loja p {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+.item-loja:hover {
+  transform: translateY(-5px);
+}
+.btn-disabled {
+  background: #444;
+  color: #aaa;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: not-allowed;
+}
+
+/* Discord */
+.discord {
+  padding: 60px 20px;
+  background: #202225;
+  color: #fff;
+  text-align: center;
+}
+.discord h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.discord p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #bbb;
+}
+.btn-discord {
+  display: inline-block;
+  background: #5865F2;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+.btn-discord:hover {
+  background: #4752C4;
+}
