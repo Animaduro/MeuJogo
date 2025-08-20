@@ -21,6 +21,16 @@
     justify-content: space-between;
     align-items: center;
   }
+.logo-img {
+  height: 40px;       /* tamanho da logo */
+  width: auto;        /* mantém proporção */
+  vertical-align: middle;
+}
+.logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
   
   .logo {
     font-weight: 700;
@@ -282,3 +292,4 @@ footer nav a:hover {
 .btn-discord:hover {
   background: #4752C4;
 }
+
