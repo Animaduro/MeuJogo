@@ -3,122 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meu Jogo - Início</title>
+  <title>MeuJogo - Início</title>
   
-  <!-- Favicon -->
   <link rel="icon" href="favicon-32x32.png" type="image/png" />
-
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="favicon-32x32.png" alt="Logo MeuJogo" class="logo-img">
-      </a>
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="favicon-32x32.png" alt="Logo MeuJogo" class="logo-img">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html" class="active">Início</a>
+    <a href="jogos.html">Jogos</a>
+    <a href="atualizacoes.html">Atualizações</a>
+    <a href="https://discord.gg/GZEASuXh" target="_blank">
+      <i class="fa-brands fa-discord"></i> Discord
+    </a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h1>Aventura Épica Espera Por Você!</h1>
+    <p>Baixe agora e comece a jogar essa experiência incrível.</p>
+    <a href="jogo1.zip" download class="btn-download">Baixar Jogo</a>
+  </div>
+</section>
+
+<section class="jogos-destaque" id="jogos">
+  <h2>🎮 Jogos em Destaque</h2>
+  <div class="grid-jogos">
+    <div class="card-jogo">
+      <img src="1000236964.jpg" alt="FNaR 1">
+      <h3>FNaR 1</h3>
+      <p>O clássico que deu início à saga do terror.</p>
+      <a href="jogo1.zip" download class="btn-download">Baixar</a>
     </div>
-    <nav>
-      <a href="index.html" class="active">Início</a>
-      <a href="jogos.html">Jogos</a>
-      <a href="atualizacoes.html">Atualizações</a>
-      <a href="https://discord.gg/GZEASuXh" target="_blank">
-        <i class="fa-brands fa-discord"></i> Discord
-      </a>
-    </nav>
-  </header>
-  
-  <!-- Hero Section -->
-  <section class="hero" id="inicio">
-    <div class="hero-content">
-      <h1>Aventura Épica Espera Por Você!</h1>
-      <p>Baixe agora e comece a jogar essa experiência incrível.</p>
-      <a href="jogo1.zip" download class="btn-download">Baixar Jogo</a>
+    <div class="card-jogo">
+      <img src="1000236965.jpg" alt="FNaR 2">
+      <h3>FNaR 2</h3>
+      <p>Novos desafios, novos inimigos e muito mais medo.</p>
+      <a href="jogo2.zip" download class="btn-download">Baixar</a>
     </div>
-  </section>
-
-  <!-- Jogos em Destaque -->
-  <section class="jogos-destaque" id="jogos">
-    <h2>🎮 Jogos em Destaque</h2>
-    <div class="grid-jogos">
-      
-      <div class="card-jogo">
-        <img src="1000236964.jpg" alt="FNaR 1">
-        <h3>FNaR 1</h3>
-        <p>O clássico que deu início à saga do terror.</p>
-        <a href="jogo1.zip" download class="btn-download">Baixar</a>
-      </div>
-
-      <div class="card-jogo">
-        <img src="1000236965.jpg" alt="FNaR 2">
-        <h3>FNaR 2</h3>
-        <p>Novos desafios, novos inimigos e muito mais medo.</p>
-        <a href="jogo2.zip" download class="btn-download">Baixar</a>
-      </div>
-
-      <div class="card-jogo">
-        <img src="1000236966.jpg" alt="FNaR 3">
-        <h3>FNaR 3</h3>
-        <p>O capítulo final, onde a verdadeira ameaça aparece.</p>
-        <a href="jogo3.zip" download class="btn-download">Baixar</a>
-      </div>
-
+    <div class="card-jogo">
+      <img src="1000236966.jpg" alt="FNaR 3">
+      <h3>FNaR 3</h3>
+      <p>O capítulo final, onde a verdadeira ameaça aparece.</p>
+      <a href="jogo3.zip" download class="btn-download">Baixar</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Atualizações -->
-  <section class="loja" id="atualizacoes">
-    <h2>⚡ Atualizações Recentes</h2>
-    <p>Fique por dentro das novidades e melhorias do jogo!</p>
-    <div class="grid-loja">
-
-      <div class="item-loja">
-        <img src="https://via.placeholder.com/300x200?text=Versão+1.2" alt="Versão 1.2">
-        <h3>Versão 1.2</h3>
-        <p>Correção de bugs e melhorias na jogabilidade.</p>
-        <span class="data">20/08/2025</span>
-      </div>
-
-      <div class="item-loja">
-        <img src="https://via.placeholder.com/300x200?text=Nova+Fase" alt="Nova Fase">
-        <h3>Nova Fase Adicionada</h3>
-        <p>Explore a nova fase "Mansão Assombrada" e desafios extras.</p>
-        <span class="data">15/08/2025</span>
-      </div>
-
-      <div class="item-loja">
-        <img src="https://via.placeholder.com/300x200?text=Evento+Especial" alt="Evento Especial">
-        <h3>Evento Especial</h3>
-        <p>Participe do evento de verão com recompensas exclusivas.</p>
-        <span class="data">10/08/2025</span>
-      </div>
-
+<section class="loja" id="loja">
+  <h2>🛒 Nossa Loja</h2>
+  <p>Confira alguns itens exclusivos para os fãs!</p>
+  <div class="grid-loja">
+    <div class="item-loja">
+      <img src="https://via.placeholder.com/300x200?text=Camiseta+MeuJogo" alt="Camiseta">
+      <h3>Camiseta Oficial</h3>
+      <p>Mostre que você faz parte da comunidade!</p>
+      <button class="btn-disabled">Em Breve</button>
     </div>
-  </section>
+    <div class="item-loja">
+      <img src="https://via.placeholder.com/300x200?text=Caneca+MeuJogo" alt="Caneca">
+      <h3>Caneca Gamer</h3>
+      <p>Ideal para tomar café enquanto joga.</p>
+      <button class="btn-disabled">Em Breve</button>
+    </div>
+    <div class="item-loja">
+      <img src="https://via.placeholder.com/300x200?text=Chaveiro+MeuJogo" alt="Chaveiro">
+      <h3>Chaveiro Exclusivo</h3>
+      <p>Leve o MeuJogo sempre com você!</p>
+      <button class="btn-disabled">Em Breve</button>
+    </div>
+  </div>
+</section>
 
-  <!-- Discord -->
-  <section class="discord" id="discord">
-    <h2>💬 Junte-se ao Nosso Discord</h2>
-    <p>Converse com outros jogadores, troque dicas e participe de eventos!</p>
-    <a href="https://discord.gg/GZEASuXh" target="_blank" class="btn-discord">Entrar no Discord</a>
-  </section>
+<section class="discord" id="discord">
+  <h2>💬 Junte-se ao Nosso Discord</h2>
+  <p>Converse com outros jogadores, troque dicas e participe de eventos!</p>
+  <a href="https://discord.gg/GZEASuXh" target="_blank" class="btn-discord">Entrar no Discord</a>
+</section>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>© 2025 MeuJogo - Todos os direitos reservados</p>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="jogos.html">Jogos</a> |
-      <a href="atualizacoes.html">Atualizações</a> |
-      <a href="https://discord.gg/GZEASuXh" target="_blank">Discord</a>
-    </nav>
-  </footer>
+<footer>
+  <p>© 2025 MeuJogo - Todos os direitos reservados</p>
+  <nav>
+    <a href="index.html">Início</a> |
+    <a href="jogos.html">Jogos</a> |
+    <a href="atualizacoes.html">Atualizações</a> |
+    <a href="https://discord.gg/GZEASuXh" target="_blank">Discord</a>
+  </nav>
+</footer>
 
-  <!-- Botão fixo Discord -->
-  <a href="https://discord.gg/GZEASuXh" target="_blank" class="btn-discord-fixo">
-    <i class="fa-brands fa-discord"></i>
-  </a>
+<a href="#" class="btn-discord-fixo"><i class="fa-brands fa-discord"></i></a>
+
+<!-- JS -->
+<script src="script.js"></script>
 </body>
 </html>
