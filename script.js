@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Botão "Voltar ao topo"
+// Criar botão topo
 const btnTopo = document.createElement('a');
 btnTopo.id = 'btnTopo';
 btnTopo.href = '#';
@@ -19,15 +19,12 @@ document.body.appendChild(btnTopo);
 
 const btnTopoEl = document.getElementById('btnTopo');
 
+// Mostrar/ocultar botão topo
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    btnTopoEl.style.display = 'block';
-  } else {
-    btnTopoEl.style.display = 'none';
-  }
+  btnTopoEl.style.display = window.scrollY > 300 ? 'block' : 'none';
 });
 
-// Scroll suave para o botão topo
+// Scroll suave ao clicar no botão topo
 btnTopoEl.addEventListener('click', e => {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
