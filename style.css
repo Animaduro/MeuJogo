@@ -82,7 +82,7 @@ header nav a.active {
   transform: scale(1.05);
 }
 
-/* ============ Jogos Destaque (index) ============ */
+/* ============ Jogos Destaque ============ */
 .jogos-destaque {
   padding: 60px 20px;
   text-align: center;
@@ -105,6 +105,7 @@ header nav a.active {
   overflow: hidden;
   transition: 0.3s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  text-align: center;
 }
 
 .card-jogo:hover {
@@ -130,25 +131,25 @@ header nav a.active {
 }
 
 /* ============ Loja / Atualizações ============ */
-.loja {
+.loja, .atualizacoes {
   padding: 60px 20px;
   text-align: center;
   background: #111;
 }
 
-.loja h2 {
+.loja h2, .atualizacoes h2 {
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
-.grid-loja {
+.grid-loja, .grid-atualizacoes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
 
-.item-loja {
+.item-loja, .item-atualizacao {
   background: #1a1a1a;
   border-radius: 15px;
   padding: 20px;
@@ -156,32 +157,24 @@ header nav a.active {
   transition: 0.3s;
 }
 
-.item-loja img {
+.item-loja img, .item-atualizacao img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.item-loja h3 {
+.item-loja h3, .item-atualizacao h3 {
   margin: 15px 0 8px;
 }
 
-.item-loja p {
+.item-loja p, .item-atualizacao p {
   font-size: 0.95rem;
   color: #ccc;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
-/* Data das atualizações */
-.item-loja .data {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.85rem;
-  color: #aaa;
-}
-
-.btn-disabled {
+.item-loja .btn-disabled {
   padding: 10px 18px;
   background: #333;
   color: #888;
@@ -190,43 +183,10 @@ header nav a.active {
   cursor: not-allowed;
 }
 
-/* ============ Lista de Jogos (jogos.html) ============ */
-.lista-jogos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 60px 20px;
-}
-
-.jogo {
-  background: #1a1a1a;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  transition: 0.3s;
-  text-align: center;
-}
-
-.jogo:hover {
-  transform: translateY(-8px);
-}
-
-.jogo img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.jogo h3 {
-  margin: 15px 0 10px;
-  font-size: 1.4rem;
-}
-
-.jogo p {
-  padding: 0 15px;
-  font-size: 0.95rem;
-  color: #ccc;
-  margin-bottom: 15px;
+.item-atualizacao .data {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
 }
 
 /* ============ Discord Section ============ */
@@ -251,11 +211,11 @@ header nav a.active {
   transform: scale(1.05);
 }
 
-/* ============ Botão Fixo Discord ============ */
+/* ============ Botões Fixos ============ */
 .btn-discord-fixo {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 100px;
   background: #5865F2;
   color: #fff;
   font-size: 1.8rem;
@@ -263,11 +223,34 @@ header nav a.active {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   transition: 0.3s;
+  z-index: 1000;
 }
 
 .btn-discord-fixo:hover {
   background: #4752c4;
   transform: scale(1.1);
+}
+
+/* Botão topo - profissional */
+.btn-topo {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: linear-gradient(135deg, #ff4757, #ff6b81);
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 14px 18px;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.btn-topo:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
 /* ============ Footer ============ */
@@ -287,23 +270,3 @@ footer nav a {
 footer nav a:hover {
   color: #fff;
 }
-.btn-topo {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #ff4757;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 12px 16px;
-  border-radius: 50%;
-  display: none;
-  cursor: pointer;
-  z-index: 1000;
-  transition: 0.3s;
-}
-
-.btn-topo:hover {
-  background: #ff6b81;
-  transform: scale(1.1);
-}
-
